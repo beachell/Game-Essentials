@@ -26,13 +26,13 @@ public class SpawnCactus : MonoBehaviour {
 
 
 	public Vector3 spawnValues;
-	public int rangeValues = 2;
+	public int rangeValues =8;
 
 	int platformNumbers = 1;
 	float spawnWait =0;
 	float startWait = 0;
-	float waveWait = 0;
-
+	//float waveWait = 0;
+	int x = 0;
 	// Use this for initialization
 	void Start()
 	{
@@ -43,12 +43,13 @@ public class SpawnCactus : MonoBehaviour {
 	IEnumerator SpawnWaves()
 	{
 		yield return new WaitForSeconds (startWait);
-		while (true) {
+		while (x<1) {
 			for (int i = 0; i < platformNumbers; i++) {
 				Vector3 spawnPosition = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
 				Quaternion spwanRotation = Quaternion.identity;
 				Instantiate (Cactus[Random.Range(0, rangeValues)], spawnPosition, spwanRotation);
-				yield return new WaitForSeconds (waveWait);
+				//yield return new WaitForSeconds (waveWait);
+				x++;
 			}
 
 		}

@@ -18,7 +18,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	void FixedUpdate()
 	{
 
-		transform.Translate (new Vector3 (notMovingSpeed, 0, 0) * Time.deltaTime);
+
 
 		float move = Input.GetAxis ("Horizontal");
 
@@ -49,6 +49,7 @@ public class CharacterControllerScript : MonoBehaviour {
 		Vector3 scale = transform.localScale;
 		scale.x *= -1;
 		transform.localScale = scale;
+		notMovingSpeed *= -1;
 	}
 
 
