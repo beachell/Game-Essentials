@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/BradBeachell.unity
+- path: Assets/StartPage.unity
   isLoaded: 1
   isActive: 1

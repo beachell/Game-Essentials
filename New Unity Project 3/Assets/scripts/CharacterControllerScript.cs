@@ -33,7 +33,7 @@ public class CharacterControllerScript : MonoBehaviour {
 
 
 		//-------------
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
+		if (Input.GetKeyDown (KeyCode.Space)) {
 			
 
 			Jump();
